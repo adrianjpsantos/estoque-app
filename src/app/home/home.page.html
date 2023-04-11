@@ -17,4 +17,8 @@
     <strong>Ready to create an app?</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
+  
+  <div *ngFor="let cliente of buscarClientes();index as i;first as isFirst">
+    <h1>{{cliente.nome}}</h1>
+  </div>
 </ion-content>

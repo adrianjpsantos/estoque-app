@@ -1,6 +1,7 @@
 1° Criar Aplicativo
 2° Criar o Serviço (Service) (ionic generate service pasta/nome)
 3° Importar o HttpClientModule no app.module.ts
+3.1° Se For StandAlone, colocar o providerHttpClient nos Providers do "main.ts"
 4° Importar o  HttpClient no servico (todos)
 5° Injetar o HttpClient no construtor do Serviço (todos)
 6° Criar Variavel da url do endpoint no serviço (todos)

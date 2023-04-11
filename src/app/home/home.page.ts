@@ -1,3 +1,4 @@
+import { ClientesService } from './../services/clientes.service';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
@@ -7,8 +8,14 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule,RouterLink],
+  imports: [IonicModule, RouterLink],
 })
 export class HomePage {
-  constructor() {}
+  constructor(private clientesService: ClientesService) {}
+
+  buscarClientes(){
+    this.clientesService.getAll().subscribe(dados =>{
+      console.log(dados);
+    });
+  }
 }
