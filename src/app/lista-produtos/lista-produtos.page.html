@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>lista-produtos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item *ngFor="let produto of listaProdutos">
+    <ion-label>
+      <h3>{{produto.id}} - {{produto.titulo}}</h3>
+      <h4>R${{produto.preco}}</h4>
+      <p>{{produto.descricao}}</p>
+    </ion-label>
+  </ion-item>
+</ion-content>
