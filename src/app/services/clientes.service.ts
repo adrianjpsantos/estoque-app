@@ -10,8 +10,15 @@ export class ClientesService {
   url = 'http://localhost:3000/clientes';
   constructor(private http: HttpClient) {}
 
-  create(cliente: Cliente) {
-    return this.http.post(this.url, cliente);
+  create(cliente: Cliente): Observable<Cliente> {
+    return this.http.post<Cliente>(this.url, cliente).pipe(
+      map((retorno) => retorno),
+      catchError((erro) => {
+        if (erro['status'] === 404)
+          return this.exibirErro(`Erro: ${erro.status}, Nada Encontrado`);
+        else return this.exibirErro(erro);
+      })
+    );
   }
 
   getAll(): Observable<Cliente[]> {

@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Criar Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-list
+      style="padding: 1rem; gap: 1rem; display: flex; flex-direction: column"
+    >
+      <ion-input
+        [(ngModel)]="nome"
+        type="text"
+        fill="outline"
+        label="Nome"
+        labelPlacement="floating"
+        helperText="Nome Completo"
+        errorText="Invalid email"
+        ngModel
+        text
+      ></ion-input>
+
+      <ion-input
+      [(ngModel)]="email"
+        type="email"
+        fill="outline"
+        label="Email"
+        labelPlacement="floating"
+        helperText="Coloca um e-mail válido"
+        errorText="E-mail inválido"
+        ngModel
+        email
+      ></ion-input>
+
+      <ion-input
+      [(ngModel)]="senha"
+        type="password"
+        fill="outline"
+        label="Senha"
+        labelPlacement="floating"
+        helperText="Coloque uma senha"
+        errorText="Senha inválida"
+        ngModel
+        password
+      ></ion-input>
+
+      <ion-input
+      [(ngModel)]="confirmaSenha"
+        type="password"
+        fill="outline"
+        label="Confirmar Senha"
+        labelPlacement="floating"
+        helperText="Repita a senha"
+        errorText="As senhas não são iguais"
+        ngModel
+        password
+      ></ion-input>
+
+      <ion-button expand="block" color="dark" (click)="salvar()">Salvar</ion-button>
+    </ion-list>
+</ion-content>
