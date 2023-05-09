@@ -10,8 +10,8 @@ export class ProdutosService {
   url = 'http://localhost:3000/produtos';
   constructor(private http: HttpClient) {}
 
-  create(produto: Produto) {
-    return this.http.post(this.url, produto);
+  create(produto: Produto) :Observable<Produto> {
+    return this.http.post<Produto>(this.url, produto);
   }
 
   getAll(): Observable<Produto[]> {

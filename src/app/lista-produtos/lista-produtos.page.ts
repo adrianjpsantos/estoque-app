@@ -2,8 +2,8 @@ import { ProdutosService } from './../services/produtos.service';
 import { Produto } from './../models/Produto.model';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { RouterLink } from '@angular/router';
 
 
 
@@ -12,7 +12,7 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: './lista-produtos.page.html',
   styleUrls: ['./lista-produtos.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule]
+  imports: [IonicModule, CommonModule,RouterLink]
 })
 export class ListaProdutosPage {
 

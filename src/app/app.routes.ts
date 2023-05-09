@@ -11,12 +11,17 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'lista-produtos',
+    path: 'produtos',
     loadComponent: () => import('./lista-produtos/lista-produtos.page').then( m => m.ListaProdutosPage)
   },
   {
     path: 'criar-cliente',
     loadComponent: () => import('./create-client/create-client.page').then( m => m.CreateClientPage)
   },
+  {
+    path: 'criar-produto',
+    loadComponent: () => import('./create-produto/create-produto.page').then( m => m.CreateProdutoPage)
+  },
+
 
 ];
