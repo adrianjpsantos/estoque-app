@@ -35,7 +35,7 @@ export class CreateProdutoPage {
       };
 
       this.produtosServices.create(produto).subscribe(dados =>{
-        console.log(`Cliente Inserido: ${dados.id}`);
+        console.log(`Produto Inserido: ${dados.id}`);
         this.route.navigateByUrl('/produtos');
       })
     }

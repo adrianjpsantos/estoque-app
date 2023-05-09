@@ -9,6 +9,8 @@
       <h5>{{cliente.id}} - {{cliente.nome}}</h5>
       <a href="emailto:{{cliente.email}}">{{cliente.email}}</a>
     </ion-label>
+    <ion-button color="warning" [routerLink]="['/cliente',cliente.id]">Editar</ion-button>
+    <ion-button color="danger" (click)='deletarCliente(cliente.id)'>Deletar</ion-button>
   </ion-item>
   <ion-item lines="none">
     <ion-button [routerLink]="['/criar-cliente']" routerLinkActive="button-active" fill="outline" color="dark">Criar Cliente</ion-button>

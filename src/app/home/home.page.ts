@@ -24,4 +24,10 @@ export class HomePage {
       this.listaClientes = dados;
     });
   }
+
+  deletarCliente(id :any){
+    this.clientesService.delete(id).subscribe(dados =>{
+      alert("Fulano Deletedo");
+    });
+  }
 }

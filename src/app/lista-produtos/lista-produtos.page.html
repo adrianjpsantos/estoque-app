@@ -11,6 +11,8 @@
       <h4>R${{produto.preco}}</h4>
       <p>{{produto.descricao}}</p>
     </ion-label>
+    <ion-button color="warning" [routerLink]="['/produto',produto.id]">Editar</ion-button>
+    <ion-button color="danger" (click)='deletarProduto(produto.id)'>Deletar</ion-button>
   </ion-item>
   <ion-item lines="none">
     <ion-button [routerLink]="['/criar-produto']" routerLinkActive="button-active" fill="outline" color="dark">Criar Produto</ion-button>

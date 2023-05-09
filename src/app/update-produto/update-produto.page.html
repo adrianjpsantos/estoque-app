@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>create-produto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list
+  style="padding: 1rem; gap: 1rem; display: flex; flex-direction: column"
+>
+  <ion-input
+    [(ngModel)]="titulo"
+    type="text"
+    fill="outline"
+    label="Titulo"
+    labelPlacement="floating"
+    helperText="Titulo do produto"
+    ngModel
+    text
+  ></ion-input>
+
+  <ion-input
+  [(ngModel)]="descricao"
+    type="text"
+    fill="outline"
+    label="Descrição"
+    labelPlacement="floating"
+    helperText="Coloque uma descrição"
+    ngModel
+    text
+  ></ion-input>
+
+  <ion-input
+  [(ngModel)]="preco"
+    type="decimal"
+    fill="outline"
+    label="Preço"
+    labelPlacement="floating"
+    helperText="Coloque um preço"
+    ngModel
+    password
+  ></ion-input>
+
+  <ion-input
+  [(ngModel)]="nome_image"
+    type="text"
+    fill="outline"
+    label="Imagem"
+    labelPlacement="floating"
+    helperText="Link da imagem"
+    ngModel
+    text
+  ></ion-input>
+
+  <ion-button expand="block" color="dark" (click)="salvar()">Salvar</ion-button>
+</ion-list>
+</ion-content>

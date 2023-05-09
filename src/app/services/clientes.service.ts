@@ -32,9 +32,9 @@ export class ClientesService {
     );
   }
 
-  getOne(id: number) {
+  getOne(id: number) : Observable<Cliente> {
     this.http.get(this.url + '/' + id);
-    return this.http.get(`${this.url}/${id}`);
+    return this.http.get<Cliente>(`${this.url}/${id}`);
   }
 
   update(cliente: Cliente) {
