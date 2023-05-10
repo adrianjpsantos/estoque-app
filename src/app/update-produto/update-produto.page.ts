@@ -52,7 +52,7 @@ export class UpdateProdutoPage implements OnInit {
       };
 
       this.produtosServices.update(produto).subscribe((dados) => {
-        console.log(`Produto Modificado: ${dados.id}`);
+        alert(`Produto Modificado: ${dados.id}`);
         this.route.navigateByUrl('/produtos');
       });
     }

@@ -33,8 +33,8 @@ export class ProdutosService {
     return this.http.put<Produto>(`${this.url}/${produto.id}`, produto);
   }
 
-  delete(id: number) {
-    return this.http.delete(`${this.url}/${id}`);
+  delete(id: number) : Observable<Produto> {
+    return this.http.delete<Produto>(`${this.url}/${id}`);
   }
 
   exibirErro(erro: any): Observable<any> {
